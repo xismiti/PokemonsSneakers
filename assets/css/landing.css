@@ -1,0 +1,175 @@
+
+
+body{
+    background-image: url("../img/vetores/landingVetores/pokemonBackground.jpg");
+    background-position: 0 20%;
+}
+
+header {
+    display: none;
+    z-index: 0;
+}
+
+.triangulo-branco{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 8;
+}
+.triangulo-vermelho{
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    z-index: 8;
+}
+
+.btn{
+    width: 120px;
+    height: 120px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 10px solid black;
+    border-radius: 50%;
+    z-index: 9;
+    font-size: 1.2rem;
+}
+
+.cards{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards>h1{
+    font-style: italic;
+    width: 100vw;
+    background-color: white;
+    text-align: center;
+    font-weight: light;
+    font-size: 2rem;
+}
+.card{
+    width: 50vw;
+    height:15vh ;
+    background-color: white;
+    margin-top: 2vh;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid black;
+    background-image: url('https://64.media.tumblr.com/158aa825d1fc1cf90018e88aafb6bdc9/tumblr_nisujlandz1qlhvfoo1_500.gif');
+    background-size: contain;
+}
+#pokemonGifs{
+    display: none;
+}
+#charmanderCard>img{
+    width:90%;
+}
+#pikachuCard>img{
+    width: 50%;
+}
+#bulbasaurCard>img{
+    width: 50%;
+}
+#squirtleCard>img{
+    width: 50%;
+}
+
+@media (min-width: 900px)
+{
+
+
+    body{
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    header{
+        border-bottom: 2px solid black; ;
+        display: block;
+        height: 12vh;
+        width: 100vw;
+        background-color: white;
+        position: absolute;
+        top:0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #pumaLogo{
+
+        height: 90%;
+    }
+    #pokemonLogo{
+        height: 80%;
+    }
+    header>p{
+        font-size: 1.5rem;
+        font-weight: light;
+        font-style: italic;
+    }
+
+    .cards{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .cards>h1{
+        display: none;
+    }
+    
+
+    .card{
+        width: 20vw;
+        height: 25vh;
+    }
+    .card:hover{
+        
+        transform: scale(1.2);
+        transition: 0.5s ease-in-out;
+    }
+    #charmanderCard>img{
+        width:75%;
+    }
+    #pikachuCard>img{
+        width: 40%;
+    }
+    #bulbasaurCard>img{
+        width: 40%;
+    }
+    #squirtleCard>img{
+        width: 35%;
+    }
+  
+
+
+
+
+}
+
+@keyframes moveToRight {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(100vw);
+    }
+}
+@keyframes moveToLeft {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-100vw);
+    }
+}
